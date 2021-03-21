@@ -10,7 +10,7 @@ import {
     Alert,
     ScrollView} from 'react-native';
 
-import SantaAnimation from '../components/SantaClaus.js';
+//import SantaAnimation from '../components/SantaClaus.js';
 import db from '../config';
 import firebase from 'firebase';
 
@@ -33,7 +33,7 @@ export default class WelcomeScreen extends Component{
 
   userSignUp = (emailId, password,confirmPassword) =>{
    if(password !== confirmPassword){
-       return Alert.alert("password doesn't match\nCheck your password.")
+       return Alert.alert("Password doesn't match\nCheck your password.")
    }else{
      firebase.auth().createUserWithEmailAndPassword(emailId, password)
      .then(()=>{
@@ -189,7 +189,7 @@ showModal = ()=>{
             this.showModal()
           }
         <View style={{justifyContent:'center', alignItems:'center'}}>
-          <SantaAnimation/>
+          
           <Text style={styles.title}>Book Santa</Text>
         </View>
         <View>
